@@ -1,152 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Testimonial Carousel with Star Ratings</title>
-<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700" rel="stylesheet"> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
-body {
-    font-family: 'Lato', sans-serif;
-    color:black;
-    
-}
-h2 {
-	color: black;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: "Roboto", sans-serif;
-	font-weight: bold;
-	position: relative;
-	margin: 25px 0 50px;
-}
-h2::after {
-	content: "";
-	width: 100px;
-	position: absolute;
-	margin: 0 auto;
-	height: 3px;
-	background: #ffdc12;
-	left: 0;
-	right: 0;
-	bottom: -10px;
-}
-.carousel {
-	width: 650px;
-	margin: 0 auto;
-}
-.carousel .item {
-	color: black;
-	font-size: 18px;
-    text-align: center;
-	overflow: hidden;
-    min-height: 300px;
-}
-.carousel .item a {
-	color: #eb7245;
-}
-.carousel .img-box {
-	width: 145px;
-	height: 145px;
-	margin: 0 auto;
-	border-radius: 50%;
-}
-.carousel .img-box img {
-	width: 100%;
-	height: 100%;
-	display: block;
-	border-radius: 50%;
-}
-.carousel .testimonial {	
-	padding: 30px 0 10px;
-}
-.carousel .overview {	
-	text-align: center;
-	padding-bottom: 5px;
-}
-.carousel .overview b {
-	color: #333;
-	font-size: 15px;
-	text-transform: uppercase;
-	display: block;	
-	padding-bottom: 5px;
-}
-.carousel .star-rating i {
-	font-size: 18px;
-	color: #ffdc12;
-}
-.carousel .carousel-control {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-    background: #999;
-    text-shadow: none;
-	top: 4px;
-}
-.carousel-control i {
-	font-size: 20px;
-	margin-right: 2px;
-}
-.carousel-control.left {
-	left: auto;
-	right: 40px;
-}
-.carousel-control.right i {
-	margin-right: -2px;
-}
-.carousel .carousel-indicators {
-	bottom: 15px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 11px;
-	height: 11px;
-	margin: 1px 5px;
-	border-radius: 50%;
-}
-.carousel-indicators li {	
-	background: #e2e2e2;
-	border-color: transparent;
-}
-.carousel-indicators li.active {
-	border: none;
-	background: #888;		
-}
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Testimonial Carousel with Star Ratings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<!-- Carousel indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>   
-	<!-- Wrapper for carousel items -->
-	<div class="carousel-inner">		
-		<div class="item carousel-item active">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-			<p class="testimonial">"Scott Sullivan is one of the best kept secrets in the Catholic Church and is a breath of fresh air. When I see all these effeminate men in the body of Christ, it is good to meet someone like Scott who is normal, tough, physical and loves JESUS.He’s the yoked out & buffed out version of Peter Kreeft. This brother needs some exposure. His presentations are going to take the Catholic Church by storm. He is the real deal. "</p>
-			<p class="overview"><b>- Jesse Romero</b>Noted public speaker, EWTN radio host, and evangelist OsCorp Tech.</p>
-		
-		</div>
-		<div class="item carousel-item">
-			<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-			<p class="overview"><b>Paula Wilson</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
-		
-		</div>
-		<div class="item carousel-item">
-			<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
-			<p class="overview"><b>Antonio Moreno</b>Web Developer at <a href="#">Circle Ltd.</a></p>
-			
-		</div>		
-	</div>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+            <li data-target="#myCarousel" data-slide-to="9"></li>
+            <li data-target="#myCarousel" data-slide-to="10"></li>
+            <li data-target="#myCarousel" data-slide-to="11"></li>
+            <li data-target="#myCarousel" data-slide-to="12"></li>
+            <li data-target="#myCarousel" data-slide-to="13"></li>
+            <li data-target="#myCarousel" data-slide-to="14"></li>
+            <li data-target="#myCarousel" data-slide-to="15"></li>
+            <li data-target="#myCarousel" data-slide-to="16"></li>
+            <li data-target="#myCarousel" data-slide-to="17"></li>
+            <li data-target="#myCarousel" data-slide-to="18"></li>
+        
+            <!-- <li data-target="#myCarousel" data-slide-to="20"></li>
+            <li data-target="#myCarousel" data-slide-to="11"></li> -->
 
-</div>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item carousel-item active">
+                <p class="testimonial">"Scott Sullivan is one of the best kept secrets in the Catholic Church and is a
+                    breath of fresh air. When I see all these effeminate men in the body of Christ, it is good to meet
+                    someone like Scott who is normal, tough, physical and loves JESUS.He’s the yoked out & buffed out
+                    version of Peter Kreeft. This brother needs some exposure. His presentations are going to take the
+                    Catholic Church by storm. He is the real deal. "</p>
+                <p class="overview"><b>Jesse Romero</b><small>Noted public speaker, EWTN radio host, and evangelist
+                        OsCorp Tech.</small></p>
+            </div>
+            <div class="item carousel-item">
+                <p class="testimonial">Dr. Scott Sullivan makes an airtight case for the beauty and objective truth of
+                    Christianity. With surgical precision and breathtaking clarity, Christ 101: The Evidence for
+                    Christianity is a formidable weapon for the mind that followers of Christ can use to defend the
+                    faith with passion, conviction, and authority. This program is comprehensive in its breadth and
+                    scope, and is very accessible at all levels of interest. Very highly recommended!
+                </p>
+                <p class="overview"><b>Deacon Harold Burke-Sivers</b><small>EWTN Series Host, Author of The Mass in
+                        Sacred Scripture</small>
+                </p>
+
+            </div>
+            <div class="item carousel-item">
+                <p class="testimonial">Scott Sullivan's 'Christ 101' course will prepare you to answer the toughest
+                    challenges and defend the most important Christian teachings.
+                    If you ever find yourself tongue-tied when talking with atheist or agnostic friends, this is the
+                    answer.
+                </p>
+                <p class="overview"><b>Brandon Vogt</b><small>Founder of StrangeNotions.com</small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">Scott Sullivan has enabled me to be more "Catholic" in that my understanding of
+                    the faith has increased. He explains things in much simpler terms that I can relate to. Even though
+                    I was raised Catholic, went to Catholic schools, I really didn't have that deep knowledge of what a
+                    Catholic really was until I started listening to his talks. Thank you Scott.
+
+                </p>
+                <p class="overview"><b>Lee Fitzhugh</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">I ordered your cds on defending the faith! It was truly the best tutorial on how
+                    to do just that. I have always tried to explain the reason for my beliefs but was not truly equipped
+                    with the knowledge I needed to lay out the true evidence and proof the Jesus is the true Savior of
+                    the world! Thank you for that.
+                </p>
+                <p class="overview"><b>M. Smith</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">I am very satisfied with your teaching in the courses that I have obtained
+                    through your ministry. thank you so very much Dr. Sullivan for your wonderful teaching and as I will
+                    say "keep up the great work that you are doing for our Christian faith"
+                </p>
+                <p class="overview"><b>Pat S.</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I was raised as a catholic and through the year found nothing but going through the motions. I have
+                    been an avid reader of the Bible and found my church, which is a Bible church. You interest me
+                    because you are a Catholic Bible teacher. I never thought I’d ever see that!
+
+                </p>
+                <p class="overview"><b>Paul Ikas</b><small></small></p>
+
+            </div>
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I really love to listen to you and read whatever you post...you are a true blessing to our Catholic
+                    Church so comprehensive, thoughtful and zealous. I love the way you present your writing God bless
+                    you and your family dear.”
+                </p>
+                <p class="overview"><b>Linda Esho</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    Scott's material is always very clear and informative. He thoroughly covers the right topics in the
+                    right order, as well as anticipates and answers the standard objections. If you want to deepen your
+                    knowledge of the faith, I would highly recommend his work. God bless you Scott!
+                </p>
+                <p class="overview"><b>Ash Banker</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    Bought multiple courses for our sons to use in homeschool high school. Our oldest (only one to use
+                    them so far) really likes them. Not sure we should've purchased logic for him, however. He has
+                    pointed out a few fallacies in our parenting =)
+                </p>
+                <p class="overview"><b>B.B. Harloldson</b><small></small></p>
+
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I am enrolled to study your Philosophy and Theology Course. I find it excellent. Your video
+                    presentation backed up by audio and printed copy makes everything very, very clear. Everything is
+                    explained in simple language. It is not the language of the academic ivory tower!
+                </p>
+                <p class="overview"><b>Tim McGrath</b><small></small></p>
+
+            </div>
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I find your apologetics materials very helpful . . . I am confronted with “intellectuals” who “know”
+                    that there is not a God . . . So, finding good content to refute that is a passion of mine. Your
+                    materials are helpful.
+                </p>
+                <p class="overview"><b>Terry Mitchell</b><small></small></p>
+
+            </div>
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I'm often asked why I converted to Christianity/Catholicism. My answer sometimes elicits questions
+                    and leads to in-depth discussions. The materials and courses provided by Dr. Scott Sullivan have
+                    given me the knowledge needed to provide satisfying answers.
+                </p>
+                <p class="overview"><b>T.J. Bennett </b><small></small></p>
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    I have kept myself in being a member of local Church and rely on your teaching and exhortations to fill out what is lacking in my Catholic understanding of much my faith, thanks for the support
+                </p>
+                <p class="overview"><b>Joshua Freeman </b><small></small></p>
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    Your videos are truly engaging, informative, and interesting. I learn so much more about Catholicism! They are so relevant to answer today's cultural and societal problems. We must beat the Devil through and through!
+
+                </p>
+                <p class="overview"><b>Cecillia Chai</b><small></small></p>
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    Scott Sullivan is more than a Classical Theist, he is an impressive evangelist, one of the few capable of addressing sophisticated intellectuals and believers troubled by the distortions of pseudo-intellectuals regarding the Faith! 
+                </p>
+                <p class="overview"><b>Ian Manger</b><small></small></p>
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    Good products - conscience, informative, and without unnecessary fluff. They helped me build a basis for further studies of topics such as logic and theology.
+                </p>
+                <p class="overview"><b>Josephine Quesnel</b><small></small></p>
+            </div>
+
+            <div class="item carousel-item">
+                <p class="testimonial">
+                    As a deacon I find your presentations very thought provoking and meets the Church's needs in this day and time.
+                </p>
+                <p class="overview"><b> Deacon Chuck
+                </b><small></small></p>
+            </div>
+
+        </div>
+
+    </div>
 </body>
-</html>                                		                            
+
+</html>
